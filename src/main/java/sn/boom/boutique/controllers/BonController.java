@@ -1,4 +1,4 @@
-package sn.boom.boutique.controller;
+package sn.boom.boutique.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
