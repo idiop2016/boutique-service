@@ -1,4 +1,4 @@
-package sn.boom.boutique.services.impl;
+package sn.boom.boutique.services.implementations;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import sn.boom.boutique.entities.Client;
 import sn.boom.boutique.exceptions.ResourceNotFoundException;
-import sn.boom.boutique.impl.ClientServiceImpl;
+import sn.boom.boutique.implementations.ClientServiceImpl;
 import sn.boom.boutique.repositories.ClientRepository;
 
 import java.util.Arrays;

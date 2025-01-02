@@ -1,4 +1,4 @@
-package sn.boom.boutique.services.impl;
+package sn.boom.boutique.services.implementations;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import org.mockito.MockitoAnnotations;
 import sn.boom.boutique.entities.Produit;
 import sn.boom.boutique.exceptions.InsufficientStockException;
 import sn.boom.boutique.exceptions.ResourceNotFoundException;
-import sn.boom.boutique.impl.ProduitServiceImpl;
+import sn.boom.boutique.implementations.ProduitServiceImpl;
 import sn.boom.boutique.repositories.ProduitRepository;
 import java.math.BigDecimal;
 import java.util.Optional;

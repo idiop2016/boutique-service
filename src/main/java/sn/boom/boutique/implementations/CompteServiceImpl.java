@@ -1,4 +1,4 @@
-package sn.boom.boutique.impl;
+package sn.boom.boutique.implementations;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package sn.boom.boutique.impl;
+package sn.boom.boutique.implementations;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
