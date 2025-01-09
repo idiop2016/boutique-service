@@ -17,6 +17,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
+/**
+ * Classe de test pour le service ProduitServiceImpl.
+ * Cette classe contient des tests unitaires pour vérifier le comportement des méthodes de ProduitServiceImpl.
+ */
 class ProduitServiceTest {
 
     @Mock
@@ -27,6 +31,10 @@ class ProduitServiceTest {
 
     private Produit produit;
 
+    /**
+     * Méthode exécutée avant chaque test.
+     * Initialise les mocks et crée un produit avec des valeurs prédéfinies.
+     */
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -38,6 +46,10 @@ class ProduitServiceTest {
         produit.setQuantiteStock(10);
     }
 
+    /**
+     * Teste la méthode updateStock() pour s'assurer qu'elle met à jour le stock avec succès.
+     * Vérifie que la quantité de stock a été mise à jour et que la méthode save a été appelée sur le produitRepository.
+     */
     @Test
     void updateStock_Success() {
         when(produitRepository.findById(1L)).thenReturn(Optional.of(produit));
@@ -49,6 +61,9 @@ class ProduitServiceTest {
         verify(produitRepository).save(any(Produit.class));
     }
 
+    /**
+     * Teste la méthode updateStock() pour s'assurer qu'elle lance une exception lorsque le stock est insuffisant.
+     */
     @Test
     void updateStock_InsufficientStock() {
         when(produitRepository.findById(1L)).thenReturn(Optional.of(produit));
@@ -57,6 +72,9 @@ class ProduitServiceTest {
             () -> produitService.updateStock(1L, -15));
     }
 
+    /**
+     * Teste la méthode getProduit() pour s'assurer qu'elle lance une exception lorsque le produit n'est pas trouvé.
+     */
     @Test
     void getProduit_NotFound() {
         when(produitRepository.findById(anyLong())).thenReturn(Optional.empty());
